@@ -14,6 +14,11 @@ from django.contrib.auth.forms import UserCreationForm
 from django.views.generic.edit import CreateView
 from django.contrib.auth.decorators import user_passes_test
 from django.shortcuts import render
+from django.contrib.auth.decorators import permission_required
+from django.shortcuts import render, get_object_or_404, redirect
+from models import Book
+from forms import BookForm
+
 
 # Create your views here.
 def book_list_view(request):
